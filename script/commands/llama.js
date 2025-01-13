@@ -38,7 +38,7 @@ module.exports.run = async function ({ api, event, args }) {
         );
         const answer = response.data.result;
 
-        const finalMessage = `Llama 3 CONTINUES AI\n━━━━━━━━━━━━━━━━━━\n${answer}\n━━━━━━━━━━━━━━━━━━\nQuestioned by: ${senderName}\n━━━━━━━━━━━━━━━━━━\nType ai clear to reset your previous chats`;
+        const finalMessage = `Llama 3 CONTINUES AI\n━━━━━━━━━━━━━━━━━━\n${answer}\n━━━━━━━━━━━━━━━━━━\nQuestioned by: ${senderName}\n━━━━━━━━━━━━━━━━━━\nType llama clear to reset your previous chats`;
         api.sendMessage(finalMessage, event.threadID);
       } catch (error) {
         console.error("Error fetching AI response or user info:", error);
